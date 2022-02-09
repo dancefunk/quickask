@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MongoDB | 知音必答</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/dist/assets/icons/logo.png">
+    <link rel="apple-touch-icon" href="/dist/assets/icons/logo.png">
+    <meta name="description" content="一个专注技术教程的订阅站">
+    <meta name="msapplication-TileImage" content="/dist/assets/icons/logo.png">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/css/0.styles.8f21bee2.css" as="style"><link rel="preload" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/app.75aef3d0.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/3.04bc4d68.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/1.7e2a5805.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/166.5275e8c1.js" as="script"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/10.307bb8d3.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/100.e075cd53.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/101.1cddf1f3.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/102.151f468a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/103.9c4bcc29.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/104.337d9a00.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/105.67d24255.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/106.be0b639f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/107.51fb4484.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/108.954db663.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/109.ba83a079.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/11.f19f14a8.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/110.174a9e61.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/111.ade4f097.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/112.d8b6e925.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/113.58236bad.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/114.24be10f4.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/115.e099c3ab.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/116.f4d19ab3.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/117.43b93ec4.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/118.c9054605.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/119.60ae4779.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/12.ddb9c796.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/120.3243b741.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/121.c9095bab.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/122.63362144.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/123.f2929966.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/124.ec163d8b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/125.0a2d7114.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/126.bebe3c08.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/127.f60a0005.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/128.009d8d30.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/129.3a5cef17.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/13.b7b68662.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/130.e5d73415.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/131.b03ac9d5.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/132.b435d03f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/133.ef5d66bf.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/134.ed8fb9f3.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/135.ca4fc059.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/136.a5062133.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/137.4f2fc53c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/138.c2ee5125.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/139.8097270f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/14.4275d71e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/140.2270f55a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/141.b9674156.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/142.4d635812.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/143.a9198f61.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/144.08533ecf.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/145.b5dec20b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/146.209d708e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/147.2bd0b9fc.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/148.d2fe0035.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/149.0fe6368d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/15.1dfb0484.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/150.da0719e6.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/151.4ee90f8b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/152.3805a134.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/153.b287e33a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/154.3035bc32.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/155.5b7d7e0e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/156.2857f126.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/157.9a42a65a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/158.5a50dfbf.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/159.d32dd865.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/16.ec796d5c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/160.03177a1b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/161.3cde6ae8.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/162.c17f1035.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/163.e3f5f144.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/164.b23acf05.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/165.a2ce819b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/167.f74dbe2a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/168.27514856.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/169.7b635db0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/17.1b638fe0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/170.95037fc0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/171.90769e64.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/172.b56245c7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/173.96614610.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/174.2ae2e144.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/175.f46175fa.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/176.a587a646.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/177.d945449d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/178.d34ac86e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/179.7059c3ad.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/18.190b77aa.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/180.09bf6d3d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/181.614fc449.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/182.b0148b8d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/183.57fbecd1.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/184.15180c84.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/185.9df868db.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/186.5ae381b8.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/187.e048edcc.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/188.c56502b9.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/189.85c87312.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/19.7aea470e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/190.5b84d618.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/191.1acede08.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/192.645b3c74.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/193.d467f7fd.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/194.d19b0157.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/195.29456648.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/196.a7579216.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/197.241dc441.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/198.d6bc5f0d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/199.841ae2fa.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/20.66edb882.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/200.993df96a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/201.23725e47.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/202.0398af47.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/203.7e83870d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/204.e8435d1e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/205.e0356921.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/206.1174b06d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/207.281591f0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/208.5e330f7c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/209.47d79359.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/21.2f8d78d5.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/210.31bc5fb9.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/211.38d07416.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/212.5bce74ce.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/213.5d32cd82.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/214.d73a6787.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/215.6667dbe7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/216.7b4d7e4a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/217.d69a3046.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/218.a486e5cd.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/219.d4cac762.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/22.c6c44c1f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/220.717b3102.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/221.49071c39.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/222.a4ed2d57.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/223.e58804f9.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/224.5577edf0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/225.89166daa.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/226.9bdb873d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/227.d5ef81d2.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/228.8a9ca1ae.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/229.c2f5d952.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/23.c784e5ea.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/230.77e2bfff.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/231.724500a7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/232.3698ce69.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/233.0510fc42.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/234.1e1c1da3.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/235.b36063fe.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/236.c2de4112.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/237.41cbc260.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/238.dc60e94c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/239.1b1917ec.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/24.ae2cec34.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/240.2d474ba6.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/241.50416b39.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/242.482ccaf8.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/243.24feb01a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/244.6cf98ef3.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/245.cdac28e7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/246.cf53b8e0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/247.2b90abc0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/248.5094a69b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/249.b126bf3f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/25.2546cfba.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/250.e5af03d5.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/251.fc32f4a7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/252.bd7938b1.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/253.8f52f800.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/254.0010b65c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/255.77435f52.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/256.93168003.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/257.d8df6369.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/258.6a4ab4d7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/259.4e4bdacb.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/26.5490eab6.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/260.8ea5a6cb.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/261.3faf9a46.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/262.946fbd23.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/263.c6481fdb.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/264.52a26e5c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/265.bf01e4d8.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/266.6513fdf4.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/267.1edf150f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/268.c16aabfd.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/269.a347bd16.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/27.8cdef29f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/270.ce3db4bb.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/271.88eb868b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/272.9209099b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/273.81c7644a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/274.f7bda86d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/275.94cacf92.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/276.ee84dc28.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/277.24644f2c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/278.edc6f117.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/279.f6859122.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/28.1ccd0b89.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/280.4537475c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/281.e9ec80a4.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/282.b3876a30.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/283.bbbe0e00.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/284.2a6e014a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/285.cdcef824.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/286.f3a7aaff.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/287.7089897f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/288.322109c1.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/289.e0050dbb.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/29.809fd9c7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/290.977fde15.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/291.add4d9de.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/292.56dd7b69.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/293.6886b896.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/294.dbb71b5b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/295.f3cc1fec.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/296.273eaa73.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/297.6d5c1c05.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/298.7a0545b8.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/299.f131206d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/30.1b718010.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/300.e1bbda58.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/301.1de263e4.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/302.dbbed3e4.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/303.b4f49cfe.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/304.665fde8c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/305.d162d706.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/306.2318ffd2.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/307.e5e5c348.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/308.f9815163.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/309.c1ba8d7b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/31.c2f1f75b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/310.c2abcd83.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/311.531d7d87.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/312.eafed5b1.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/313.2ba9c595.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/314.0810e6e1.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/315.e7c74ea9.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/316.c4c9af58.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/317.fdd155ba.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/318.c0988be9.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/319.6548d414.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/32.9135f8b9.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/320.bfdf2381.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/321.885ce064.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/322.9cfce210.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/323.0c65ab87.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/324.8232496f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/325.7b4f77ce.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/326.d692851a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/327.16f337d2.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/328.b4eb422c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/329.62d38f9e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/33.55463f5b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/330.d6bfecc1.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/331.59f184d0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/332.d4b3e03c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/333.bccec26b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/334.6acc170d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/335.96193baf.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/336.39d67ad4.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/337.ce618345.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/338.1c82ffcb.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/339.7479a128.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/34.f1aa55a7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/340.c1b4a3fd.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/341.318bb55d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/342.fb78fccd.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/343.45f65306.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/344.3d2f8639.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/345.b5df7865.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/346.dbaef7bf.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/347.d2d86b8b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/348.e390d878.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/349.979b75b1.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/35.dad20803.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/350.608b57b1.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/351.c6b3c09f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/352.ffb8db6f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/353.df98a49a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/354.fae01e62.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/355.a3eacbe6.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/356.ed4b6e64.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/357.35f20d42.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/358.82df7d97.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/359.ea38f3ff.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/36.f0bfe29a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/360.4a4064f1.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/361.b46f157d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/362.bd32c34c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/363.8cffff1e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/364.a0dc095f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/365.b3330cf5.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/366.7a757790.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/367.0cbf4090.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/368.16cc299b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/369.f1e0c11c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/37.50d443d5.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/370.86ac9a5c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/371.5fcbea82.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/372.eb96197f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/373.3d5196d5.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/374.008c6cc6.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/375.7f279ff4.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/376.47687b8b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/377.80d99529.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/378.b1eb9c8b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/379.be0cbdd8.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/38.3a5a5c77.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/380.d39acaf2.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/39.2247ab22.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/4.782a9185.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/40.21e7a5e5.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/41.a17a8ca9.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/42.5e7fad18.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/43.d9d922f3.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/44.ad8ffdb4.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/45.0be53a3e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/46.0c300de2.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/47.0e847117.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/48.2914f852.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/49.c72df085.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/5.b23595e5.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/50.0c4b989a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/51.e2e6d62e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/52.a29e804c.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/53.e415eed0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/54.6f516568.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/55.f4f47bc6.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/56.27a45588.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/57.2849bb21.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/58.3e926783.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/59.01d82cd7.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/6.a30a3d52.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/60.0503a4f0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/61.9c0f4a80.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/62.ab13350d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/63.e8b1ebee.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/64.a4d59785.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/65.8fabaddd.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/66.b7818001.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/67.66146548.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/68.2bcb703e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/69.fd777190.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/7.8355dd8f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/70.583f7b7e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/71.7f5f1ece.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/72.ffbf185b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/73.eedd7d45.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/74.d51b422e.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/75.0ae5dac9.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/76.94cf6c7a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/77.365c32f3.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/78.ea62970b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/79.a4c20140.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/8.784867c9.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/80.1c09336d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/81.6b692c6b.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/82.af63fe41.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/83.97df86af.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/84.ac91b46f.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/85.c09a44ac.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/86.1839987a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/87.599f0f84.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/88.c40a5df0.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/89.fc3744a3.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/9.254614b6.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/90.748d6439.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/91.28a2a7d5.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/92.3930c596.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/93.ba7c3c58.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/94.8af2488d.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/95.a6d14635.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/96.c9b64d99.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/97.c3baad0a.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/98.4de60201.js"><link rel="prefetch" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/99.e99977da.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/css/0.styles.8f21bee2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-77037422 data-v-1156296a data-v-1156296a><h3 class="title" data-v-77037422 data-v-77037422>知音必答</h3> <p class="description" data-v-77037422 data-v-77037422>一个专注技术教程的订阅站</p> <label id="box" class="inputBox" data-v-77037422 data-v-77037422><input type="password" value="" data-v-77037422> <span data-v-77037422>Konck! Knock!</span> <button data-v-77037422>OK</button></label> <div class="footer" data-v-77037422 data-v-77037422><span data-v-77037422><i class="iconfont reco-copyright" data-v-77037422></i> <a data-v-77037422><span data-v-77037422>FunkyRicky</span>
+            
+          <span data-v-77037422>2015 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/dist/assets/icons/logo.png" alt="知音必答" class="logo"> <span class="site-name">知音必答</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/" class="nav-link"><i class="iconfont reco-document"></i>
+  职业路径
+</a></div><div class="nav-item"><a href="/nav.02.topic.hidden/" class="nav-link"><i class="iconfont reco-other"></i>
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      技术碎片
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Mac/" class="nav-link"><i class="undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/categories/服务器运维/" class="nav-link"><i class="undefined"></i>
+  服务器运维
+</a></li><li class="dropdown-item"><!----> <a href="/categories/WEB前端/" class="nav-link"><i class="undefined"></i>
+  WEB前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PHP/" class="nav-link"><i class="undefined"></i>
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Golang/" class="nav-link"><i class="undefined"></i>
+  Golang
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/物联网开发/" class="nav-link"><i class="undefined"></i>
+  物联网开发
+</a></li><li class="dropdown-item"><!----> <a href="/categories/嵌入式开发/" class="nav-link"><i class="undefined"></i>
+  嵌入式开发
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dance/" class="nav-link"><i class="undefined"></i>
+  Dance
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/nav.03.source.hidden/" class="nav-link"><i class="iconfont reco-api"></i>
+  资源汇总
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时轴
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/dist/assets/icons/avatar.png" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    FunkyRicky
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>370</h3> <h6 data-v-828910c6>文章</h6></div> <div data-v-828910c6><h3 data-v-828910c6>62</h3> <h6 data-v-828910c6>标签</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/" class="nav-link"><i class="iconfont reco-document"></i>
+  职业路径
+</a></div><div class="nav-item"><a href="/nav.02.topic.hidden/" class="nav-link"><i class="iconfont reco-other"></i>
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      技术碎片
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Mac/" class="nav-link"><i class="undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/categories/服务器运维/" class="nav-link"><i class="undefined"></i>
+  服务器运维
+</a></li><li class="dropdown-item"><!----> <a href="/categories/WEB前端/" class="nav-link"><i class="undefined"></i>
+  WEB前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PHP/" class="nav-link"><i class="undefined"></i>
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Golang/" class="nav-link"><i class="undefined"></i>
+  Golang
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/物联网开发/" class="nav-link"><i class="undefined"></i>
+  物联网开发
+</a></li><li class="dropdown-item"><!----> <a href="/categories/嵌入式开发/" class="nav-link"><i class="undefined"></i>
+  嵌入式开发
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dance/" class="nav-link"><i class="undefined"></i>
+  Dance
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/nav.03.source.hidden/" class="nav-link"><i class="iconfont reco-api"></i>
+  资源汇总
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时轴
+</a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>职业路径</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/" class="sidebar-link">日常更新</a></li><li><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/01-webqian-duan-gong-cheng-shi.html" class="sidebar-link">WEB前端工程师</a></li><li><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/02-phpkai-fa-gong-cheng-shi.html" class="sidebar-link">PHP开发工程师</a></li><li><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/03-pythonkai-fa-gong-cheng-shi.html" class="sidebar-link">Python开发工程师</a></li><li><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/04-golangkai-fa-gong-cheng-shi.html" class="sidebar-link">Golang开发工程师</a></li><li><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/05-javakai-fa-gong-cheng-shi.html" class="sidebar-link">Java开发工程师</a></li><li><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/06-wu-lian-wang-kai-fa-gong-cheng-shi.html" class="sidebar-link">物联网开发工程师</a></li><li><a href="/nav.01.book.hidden/01.zhi-ye-lu-jing/07-qian-ru-shi-kai-fa-gong-cheng-shi.html" class="sidebar-link">嵌入式开发工程师</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>WEB前端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>PHP开发</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>物联网开发</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-77037422 data-v-1156296a><h3 class="title" data-v-77037422 data-v-77037422>MongoDB</h3> <!----> <label id="box" class="inputBox" data-v-77037422 data-v-77037422><input type="password" value="" data-v-77037422> <span data-v-77037422>Konck! Knock!</span> <button data-v-77037422>OK</button></label> <div class="footer" data-v-77037422 data-v-77037422><span data-v-77037422><i class="iconfont reco-copyright" data-v-77037422></i> <a data-v-77037422><span data-v-77037422>FunkyRicky</span>
+            
+          <span data-v-77037422>2015 - </span>
+          2022
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">MongoDB</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>FunkyRicky</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>2020/1/4</span></i> <i class="iconfont reco-eye" data-v-1ff7123e><span id="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/05-mongodb.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-1ff7123e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>WEB前端</span><span class="tag-item" data-v-1ff7123e>Javascript</span><span class="tag-item" data-v-1ff7123e>node.js</span><span class="tag-item" data-v-1ff7123e>express.js</span><span class="tag-item" data-v-1ff7123e>mongodb</span></i></div></div> <div class="theme-reco-content content__default"><h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ cnpm install mongodb
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="数据库操作-curd"><a href="#数据库操作-curd" class="header-anchor">#</a> 数据库操作(CURD)</h3> <p>与 MySQL 不同的是 MongoDB 会自动创建数据库和集合，所以使用前我们不需要手动去创建。</p> <h3 id="插入数据"><a href="#插入数据" class="header-anchor">#</a> 插入数据</h3> <blockquote><ul><li>以下实例我们连接数据库 demo 的 site 表，并插入两条数据：</li></ul></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var MongoClient = require('mongodb').MongoClient;
+var DB_CONN_STR = 'mongodb://localhost:27017/demo'; # 数据库为 demo
+ 
+var insertData = function(db, callback) {  
+    //连接到表 site
+    var collection = db.collection('site');
+    //插入数据
+    var data = [{&quot;name&quot;:&quot;demo&quot;,&quot;url&quot;:&quot;www.demo.com&quot;},{&quot;name&quot;:&quot;demo&quot;,&quot;url&quot;:&quot;c.demo.com&quot;}];
+    collection.insert(data, function(err, result) { 
+        if(err)
+        {
+            console.log('Error:'+ err);
+            return;
+        }     
+        callback(result);
+    });
+}
+ 
+MongoClient.connect(DB_CONN_STR, function(err, db) {
+    console.log(&quot;连接成功！&quot;);
+    insertData(db, function(result) {
+        console.log(result);
+        db.close();
+    });
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><blockquote><ul><li>执行以下命令输出就结果为：</li></ul></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ node test.js
+连接成功！
+{ result: { ok: 1, n: 2 },
+  ops: 
+   [ { name: 'demo',
+       url: 'www.demo.com',
+       _id: 58c25e13a08de70d3b9d4116 },
+     { name: 'demo',
+       url: 'c.demo.com',
+       _id: 58c25e13a08de70d3b9d4117 } ],
+  insertedCount: 2,
+  insertedIds: [ 58c25e13a08de70d3b9d4116, 58c25e13a08de70d3b9d4117 ] }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>从输出结果来看，数据已插入成功。		
+我们也可以打开 MongoDB 的客户端查看数据，如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&gt; show dbs
+admin   0.000GB
+local   0.000GB
+demo  0.000GB          # 自动创建了 demo 数据库
+&gt; show tables
+site                     # 自动创建了 site 集合（数据表）
+&gt; db.site.find()         # 查看集合中的数据
+{ &quot;_id&quot; : ObjectId(&quot;58c25f300cd56e0d7ddfc0c8&quot;), &quot;name&quot; : &quot;demo&quot;, &quot;url&quot; : &quot;www.demo.com&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;58c25f300cd56e0d7ddfc0c9&quot;), &quot;name&quot; : &quot;demo&quot;, &quot;url&quot; : &quot;c.demo.com&quot; }
+&gt; 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="查询数据"><a href="#查询数据" class="header-anchor">#</a> 查询数据</h3> <blockquote><ul><li>以下实例搜索 name 为 &quot;demo&quot; 的实例：</li></ul></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var MongoClient = require('mongodb').MongoClient;
+var DB_CONN_STR = 'mongodb://localhost:27017/demo';    
+ 
+var selectData = function(db, callback) {  
+  //连接到表  
+  var collection = db.collection('site');
+  //查询数据
+  var whereStr = {&quot;name&quot;:'demo'};
+  collection.find(whereStr).toArray(function(err, result) {
+    if(err)
+    {
+      console.log('Error:'+ err);
+      return;
+    }     
+    callback(result);
+  });
+}
+ 
+MongoClient.connect(DB_CONN_STR, function(err, db) {
+  console.log(&quot;连接成功！&quot;);
+  selectData(db, function(result) {
+    console.log(result);
+    db.close();
+  });
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><blockquote><ul><li>执行以下命令输出就结果为：</li></ul></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>连接成功！
+[ { _id: 58c25f300cd56e0d7ddfc0c8,
+    name: 'demo',
+    url: 'www.demo.com' },
+  { _id: 58c25f300cd56e0d7ddfc123,
+    name: 'demo',
+    url: 'www.demo.com' },
+]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="更新数据"><a href="#更新数据" class="header-anchor">#</a> 更新数据</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>var MongoClient = require('mongodb').MongoClient;
+var DB_CONN_STR = 'mongodb://localhost:27017/demo';    
+ 
+var updateData = function(db, callback) {  
+    //连接到表  
+    var collection = db.collection('site');
+    //更新数据
+    var whereStr = {&quot;name&quot;:'demo'};
+    var updateStr = {$set: { &quot;url&quot; : &quot;https://www.baidu.com&quot; }};
+    collection.update(whereStr,updateStr, function(err, result) {
+        if(err)
+        {
+            console.log('Error:'+ err);
+            return;
+        }     
+        callback(result);
+    });
+}
+ 
+MongoClient.connect(DB_CONN_STR, function(err, db) {
+    console.log(&quot;连接成功！&quot;);
+    updateData(db, function(result) {
+        console.log(result);
+        db.close();
+    });
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><blockquote><ul><li>执行成功后，进入 mongo 管理工具查看数据已修改：</li></ul></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>&gt; db.site.find()
+{ &quot;_id&quot; : ObjectId(&quot;58c25f300cd56e0d7ddfc0c8&quot;), &quot;name&quot; : &quot;demo&quot;, &quot;url&quot; : &quot;https://www.demo.com&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;58c25f300cd56e0d7ddfc0c9&quot;), &quot;name&quot; : &quot;demo&quot;, &quot;url&quot; : &quot;c.demo.com&quot; }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="删除数据"><a href="#删除数据" class="header-anchor">#</a> 删除数据</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>var MongoClient = require('mongodb').MongoClient;
+var DB_CONN_STR = 'mongodb://localhost:27017/demo';    
+ 
+var delData = function(db, callback) {  
+  //连接到表  
+  var collection = db.collection('site');
+  //删除数据
+  var whereStr = {&quot;name&quot;:'demo'};
+  collection.remove(whereStr, function(err, result) {
+    if(err)
+    {
+      console.log('Error:'+ err);
+      return;
+    }     
+    callback(result);
+  });
+}
+ 
+MongoClient.connect(DB_CONN_STR, function(err, db) {
+  console.log(&quot;连接成功！&quot;);
+  delData(db, function(result) {
+    console.log(result);
+    db.close();
+  });
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><blockquote><ul><li>执行成功后，进入 mongo 管理工具查看数据已删除：</li></ul></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>&gt; db.site.find()
+{ &quot;_id&quot; : ObjectId(&quot;58c25f300cd56e0d7ddfc0c8&quot;), &quot;name&quot; : &quot;demo&quot;, &quot;url&quot; : &quot;https://www.demo.com&quot; }
+&gt; 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="mongoose操作类-封装mongodb-可用于项目"><a href="#mongoose操作类-封装mongodb-可用于项目" class="header-anchor">#</a> mongoose操作类(封装mongodb) 可用于项目</h3> <blockquote><ul><li>新建database.js</li></ul></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * mongoose操作类(封装mongodb)
+ */
+
+var fs = require('fs');
+var path = require('path');
+var mongoose = require('mongoose');
+var logger = require('pomelo-logger').getLogger('mongodb-log');
+
+var options = {
+    db_user: &quot;&quot;,
+    db_pwd: &quot;&quot;,
+    db_host: &quot;localhost&quot;,
+    db_port: 27017,
+    db_name: &quot;blog&quot;
+};
+
+var dbURL = &quot;mongodb://&quot; + options.db_user + &quot;:&quot; + options.db_pwd + &quot;@&quot; + options.db_host + &quot;:&quot; + options.db_port + &quot;/&quot; + options.db_name;
+mongoose.connect(dbURL);
+
+mongoose.connection.on('connected', function (err) {
+    if (err) logger.error('Database connection failure');
+});
+
+mongoose.connection.on('error', function (err) {
+    logger.error('Mongoose connected error ' + err);
+});
+
+mongoose.connection.on('disconnected', function () {
+    logger.error('Mongoose disconnected');
+});
+
+process.on('SIGINT', function () {
+    mongoose.connection.close(function () {
+        logger.info('Mongoose disconnected through app termination');
+        process.exit(0);
+    });
+});
+
+var DB = function () {
+    this.mongoClient = {};
+    var filename = path.join(path.dirname(__dirname).replace('app', ''), 'config/table.json');
+    this.tabConf = JSON.parse(fs.readFileSync(path.normalize(filename)));
+};
+
+/**
+ * 初始化mongoose model
+ * @param table_name 表名称(集合名称)
+ */
+DB.prototype.getConnection = function (table_name) {
+    if (!table_name) return;
+    if (!this.tabConf[table_name]) {
+        logger.error('No table structure');
+        return false;
+    }
+
+    var client = this.mongoClient[table_name];
+    if (!client) {
+        //构建用户信息表结构
+        var nodeSchema = new mongoose.Schema(this.tabConf[table_name]);
+
+        //构建model
+        client = mongoose.model(table_name, nodeSchema, table_name);
+
+        this.mongoClient[table_name] = client;
+    }
+    return client;
+};
+
+/**
+ * 保存数据
+ * @param table_name 表名
+ * @param fields 表数据
+ * @param callback 回调方法
+ */
+DB.prototype.save = function (table_name, fields, callback) {
+    if (!fields) {
+        if (callback) callback({msg: 'Field is not allowed for null'});
+        return false;
+    }
+
+    var err_num = 0;
+    for (var i in fields) {
+        if (!this.tabConf[table_name][i]) err_num ++;
+    }
+    if (err_num &gt; 0) {
+        if (callback) callback({msg: 'Wrong field name'});
+        return false;
+    }
+
+    var node_model = this.getConnection(table_name);
+    var mongooseEntity = new node_model(fields);
+    mongooseEntity.save(function (err, res) {
+        if (err) {
+            if (callback) callback(err);
+        } else {
+            if (callback) callback(null, res);
+        }
+    });
+};
+
+/**
+ * 更新数据
+ * @param table_name 表名
+ * @param conditions 更新需要的条件 {_id: id, user_name: name}
+ * @param update_fields 要更新的字段 {age: 21, sex: 1}
+ * @param callback 回调方法
+ */
+DB.prototype.update = function (table_name, conditions, update_fields, callback) {
+    if (!update_fields || !conditions) {
+        if (callback) callback({msg: 'Parameter error'});
+        return;
+    }
+    var node_model = this.getConnection(table_name);
+    node_model.update(conditions, {$set: update_fields}, {multi: true, upsert: true}, function (err, res) {
+        if (err) {
+            if (callback) callback(err);
+        } else {
+            if (callback) callback(null, res);
+        }
+    });
+};
+
+/**
+ * 更新数据方法(带操作符的)
+ * @param table_name 数据表名
+ * @param conditions 更新条件 {_id: id, user_name: name}
+ * @param update_fields 更新的操作符 {$set: {id: 123}}
+ * @param callback 回调方法
+ */
+DB.prototype.updateData = function (table_name, conditions, update_fields, callback) {
+    if (!update_fields || !conditions) {
+        if (callback) callback({msg: 'Parameter error'});
+        return;
+    }
+    var node_model = this.getConnection(table_name);
+    node_model.findOneAndUpdate(conditions, update_fields, {multi: true, upsert: true}, function (err, data) {
+        if (callback) callback(err, data);
+    });
+};
+
+/**
+ * 删除数据
+ * @param table_name 表名
+ * @param conditions 删除需要的条件 {_id: id}
+ * @param callback 回调方法
+ */
+DB.prototype.remove = function (table_name, conditions, callback) {
+    var node_model = this.getConnection(table_name);
+    node_model.remove(conditions, function (err, res) {
+        if (err) {
+            if (callback) callback(err);
+        } else {
+            if (callback) callback(null, res);
+        }
+    });
+};
+
+/**
+ * 查询数据
+ * @param table_name 表名
+ * @param conditions 查询条件
+ * @param fields 待返回字段
+ * @param callback 回调方法
+ */
+DB.prototype.find = function (table_name, conditions, fields, callback) {
+    var node_model = this.getConnection(table_name);
+    node_model.find(conditions, fields || null, {}, function (err, res) {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null, res);
+        }
+    });
+};
+
+/**
+ * 查询单条数据
+ * @param table_name 表名
+ * @param conditions 查询条件
+ * @param callback 回调方法
+ */
+DB.prototype.findOne = function (table_name, conditions, callback) {
+    var node_model = this.getConnection(table_name);
+    node_model.findOne(conditions, function (err, res) {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null, res);
+        }
+    });
+};
+
+/**
+ * 根据_id查询指定的数据
+ * @param table_name 表名
+ * @param _id 可以是字符串或 ObjectId 对象。
+ * @param callback 回调方法
+ */
+DB.prototype.findById = function (table_name, _id, callback) {
+    var node_model = this.getConnection(table_name);
+    node_model.findById(_id, function (err, res){
+        if (err) {
+            callback(err);
+        } else {
+            callback(null, res);
+        }
+    });
+};
+
+/**
+ * 返回符合条件的文档数
+ * @param table_name 表名
+ * @param conditions 查询条件
+ * @param callback 回调方法
+ */
+DB.prototype.count = function (table_name, conditions, callback) {
+    var node_model = this.getConnection(table_name);
+    node_model.count(conditions, function (err, res) {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null, res);
+        }
+    });
+};
+
+/**
+ * 查询符合条件的文档并返回根据键分组的结果
+ * @param table_name 表名
+ * @param field 待返回的键值
+ * @param conditions 查询条件
+ * @param callback 回调方法
+ */
+DB.prototype.distinct = function (table_name, field, conditions, callback) {
+    var node_model = this.getConnection(table_name);
+    node_model.distinct(field, conditions, function (err, res) {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null, res);
+        }
+    });
+};
+
+/**
+ * 连写查询
+ * @param table_name 表名
+ * @param conditions 查询条件 {a:1, b:2}
+ * @param options 选项：{fields: &quot;a b c&quot;, sort: {time: -1}, limit: 10}
+ * @param callback 回调方法
+ */
+DB.prototype.where = function (table_name, conditions, options, callback) {
+    var node_model = this.getConnection(table_name);
+    node_model.find(conditions)
+        .select(options.fields || '')
+        .sort(options.sort || {})
+        .limit(options.limit || {})
+        .skip(options.skip || 0)
+        .exec(function (err, res) {
+            if (err) {
+                callback(err);
+            } else {
+                callback(null, res);
+            }
+        });
+};
+
+module.exports = new DB();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br></div></div><blockquote><ul><li>新建table.json</li></ul></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+    &quot;article&quot;: {
+        &quot;art_title&quot;: &quot;String&quot;,
+        &quot;art_img&quot;: &quot;String&quot;,
+        &quot;art_author&quot;: &quot;String&quot;,
+        &quot;art_time&quot;: &quot;String&quot;
+    },
+    &quot;about&quot;:{
+        &quot;about_name&quot;:&quot;String&quot;,
+        &quot;about_job&quot;:&quot;String&quot;,
+        &quot;about_desc&quot;:&quot;String&quot;,
+        &quot;about_img&quot;:&quot;String&quot;,
+        &quot;about_content&quot;:&quot;String&quot;
+    },
+    &quot;comment&quot;:{
+        &quot;comment_content&quot;:&quot;String&quot;,
+        &quot;comment_time&quot;:&quot;String&quot;
+    },
+    &quot;person&quot;:{
+        &quot;person_img&quot;:&quot;String&quot;,
+        &quot;person_content&quot;:&quot;String&quot;,
+        &quot;person_time&quot;:&quot;String&quot;
+    },
+    &quot;photo&quot;:{
+        &quot;photo_img&quot;:&quot;String&quot;,
+        &quot;photo_time&quot;:&quot;String&quot;
+    },
+    &quot;cate&quot;:{
+        &quot;cate_name&quot;:&quot;String&quot;,
+        &quot;cate_time&quot;:&quot;String&quot;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><blockquote><ul><li>使用</li></ul></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var db = require(path.join(__dirname,'../config/database.js'));
+
+db.findOne(&quot;about&quot;,{},function(err,about){
+   	//数据结构
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/04-mysql.html" class="prev">
+            MySQL
+          </a></span> <span class="next"><a href="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/06-you-xiang-fu-wu.html">
+            邮件服务
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-3" data-v-70334359><a href="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/05-mongodb.html#安装" class="sidebar-link reco-side-安装" data-v-70334359>安装</a></li><li class="level-3" data-v-70334359><a href="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/05-mongodb.html#数据库操作-curd" class="sidebar-link reco-side-数据库操作-curd" data-v-70334359>数据库操作(CURD)</a></li><li class="level-3" data-v-70334359><a href="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/05-mongodb.html#插入数据" class="sidebar-link reco-side-插入数据" data-v-70334359>插入数据</a></li><li class="level-3" data-v-70334359><a href="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/05-mongodb.html#查询数据" class="sidebar-link reco-side-查询数据" data-v-70334359>查询数据</a></li><li class="level-3" data-v-70334359><a href="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/05-mongodb.html#更新数据" class="sidebar-link reco-side-更新数据" data-v-70334359>更新数据</a></li><li class="level-3" data-v-70334359><a href="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/05-mongodb.html#删除数据" class="sidebar-link reco-side-删除数据" data-v-70334359>删除数据</a></li><li class="level-3" data-v-70334359><a href="/nav.01.book.hidden/02.webqian-duan/02-webqian-duan-jin-jie/04-nodejs/02-ying-yong-da-jian/01-express/05-mongodb.html#mongoose操作类-封装mongodb-可用于项目" class="sidebar-link reco-side-mongoose操作类-封装mongodb-可用于项目" data-v-70334359>mongoose操作类(封装mongodb) 可用于项目</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><APlayer audio="" fixed="true" mini="true" theme="#000000" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="0" list-folded="true" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/app.75aef3d0.js" defer></script><script src="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/3.04bc4d68.js" defer></script><script src="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/1.7e2a5805.js" defer></script><script src="https://cdn.jsdelivr.net/gh/dancefunk/quickask@1.0/dist/assets/js/166.5275e8c1.js" defer></script>
+  </body>
+</html>
