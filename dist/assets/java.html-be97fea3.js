@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-11ad368c","path":"/docs/book/job/java.html","title":"Java开发工程师","lang":"en-US","frontmatter":{"title":"Java开发工程师","date":"2020-06-18T00:00:00.000Z","categories":["Java"],"tags":["java"],"publish":false},"headers":[],"git":{"createdTime":null,"updatedTime":null,"contributors":[]},"filePathRelative":"docs/book/job/java.md"}');export{a as data};
