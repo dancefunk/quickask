@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-5c9c6f28","path":"/docs/book/python/","title":"书籍简述","lang":"en-US","frontmatter":{"title":"书籍简述","publish":false},"headers":[],"git":{"createdTime":null,"updatedTime":null,"contributors":[]},"filePathRelative":"docs/book/python/README.md"}');export{t as data};

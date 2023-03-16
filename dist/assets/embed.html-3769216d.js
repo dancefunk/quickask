@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-2ab9a13d","path":"/docs/book/job/embed.html","title":"嵌入式开发工程师","lang":"en-US","frontmatter":{"title":"嵌入式开发工程师","date":"2020-06-18T00:00:00.000Z","categories":["嵌入式开发"],"tags":["嵌入式开发"],"publish":false},"headers":[],"git":{"createdTime":null,"updatedTime":null,"contributors":[]},"filePathRelative":"docs/book/job/embed.md"}');export{e as data};
