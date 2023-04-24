@@ -6,10 +6,6 @@ import{_ as n,p as i,q as e,Y as l}from"./framework-aa5c4115.js";const s={},d=l(
 第三阶段 框架系列
 	Webpack / Vite / ESLint
 	
-	webpack 很久没更新了不知道有没有版本不兼容的
-	JS兼容处理 要加上 eslint 检查忽略
-	devServer与HMR  一直到 externals 这里有问题  除了代码分割
-	
 	React 要写全家桶 react-native
 	
 	Flutter / Electron 框架
@@ -18,7 +14,7 @@ import{_ as n,p as i,q as e,Y as l}from"./framework-aa5c4115.js";const s={},d=l(
 	ThreeJS
 	
 第五阶段 - 第八阶段 可能缩减 要么不要了
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p>php</p></blockquote><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>第一阶段 基础入门
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p>php</p></blockquote><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>第一阶段 基础入门
 	Mysql 看看要不要单独拿出来当一个课程 布局结构按照下面的来
 	数据库：
 		Mysql
