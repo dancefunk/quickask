@@ -1,7 +1,7 @@
 import{_ as n,p as a,q as s,Y as e}from"./framework-aa5c4115.js";const t={},i=e(`<h3 id="let关键字" tabindex="-1"><a class="header-anchor" href="#let关键字" aria-hidden="true">#</a> let关键字</h3><h4 id="作用" tabindex="-1"><a class="header-anchor" href="#作用" aria-hidden="true">#</a> 作用</h4><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code>声明变量，用来代替<span class="token keyword">var</span>
 <span class="token keyword">let</span> 变量名 <span class="token operator">=</span> 值
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="特点" tabindex="-1"><a class="header-anchor" href="#特点" aria-hidden="true">#</a> 特点</h4><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">let</span>声明的变量不能重复声明
-<span class="token keyword">let</span>声明的变量不会变量提升
+<span class="token keyword">let</span>声明的变量不会变量提升，由于<span class="token string">&quot;暂时性死区&quot;</span>的存在，如果在声明变量前去调用的话会抛出异常
 <span class="token keyword">let</span>声明的变量不会再作为顶层全局的属性
 <span class="token keyword">let</span>声明的变量在全局作用域和局部作用域的基础上新增了块级作用域
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="代码" tabindex="-1"><a class="header-anchor" href="#代码" aria-hidden="true">#</a> 代码</h4><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span>
