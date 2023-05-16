@@ -1,33 +1,19 @@
-import{_ as p,p as l,q as i,s as n,R as s,t,Y as e,n as c}from"./framework-aa5c4115.js";const o="/assets/rem-5e7558f2.jpg",u={},d=e(`<h3 id="重置样式" tabindex="-1"><a class="header-anchor" href="#重置样式" aria-hidden="true">#</a> 重置样式</h3><div class="language-css line-numbers-mode" data-ext="css"><pre class="language-css"><code><span class="token selector">HTML标签在浏览器里有默认的样式,例如p标签有上下边距
-不同浏览器的默认样式之间也会有差别,例如ul默认带有缩进的样式
-在IE下,它的缩进是通过margin实现的
-在Firefox下,它的缩进是由padding实现的
-在切换页面的时候,浏览器的默认样式往会给我们带来麻烦,影响开发效率
-所以解决方法就是一开始就将浏览器的默认样式全部去掉,更准确说就是通过重新定义标签样式
-最简单的说法就是把浏览器提供的默认样式覆盖掉
-这就是CSS reset。最简单的重置: *</span><span class="token punctuation">{</span><span class="token property">margin</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="reset-css样本" tabindex="-1"><a class="header-anchor" href="#reset-css样本" aria-hidden="true">#</a> reset.css样本</h3>`,3),r={href:"http://marvin1023.github.io/sandal/reset.html",target:"_blank",rel:"noopener noreferrer"},v=e(`<h3 id="响应式布局适配案例" tabindex="-1"><a class="header-anchor" href="#响应式布局适配案例" aria-hidden="true">#</a> 响应式布局适配案例</h3><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>http://huodong.m.taobao.com/act/yibo.html
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="响应式布局" tabindex="-1"><a class="header-anchor" href="#响应式布局" aria-hidden="true">#</a> 响应式布局</h3><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式
-通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验
+import{_ as p,p as l,q as i,s as n,R as s,t as e,Y as a,n as c}from"./framework-aa5c4115.js";const o="/assets/rem-5e7558f2.jpg",u={},d=a(`<h3 id="重置样式" tabindex="-1"><a class="header-anchor" href="#重置样式" aria-hidden="true">#</a> 重置样式</h3><div class="language-css line-numbers-mode" data-ext="css"><pre class="language-css"><code><span class="token selector">不同浏览器对HTML标签有不同的样式，这些不同的样式会影响我们布局的兼容性
+所以我们需要在开始做布局之前，先清除掉这些默认样式
+最简单的一种做法：*</span><span class="token punctuation">{</span><span class="token property">margin</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="reset-css样本" tabindex="-1"><a class="header-anchor" href="#reset-css样本" aria-hidden="true">#</a> reset.css样本</h3>`,3),r={href:"http://marvin1023.github.io/sandal/reset.html",target:"_blank",rel:"noopener noreferrer"},v=a(`<h3 id="响应式布局适配案例" tabindex="-1"><a class="header-anchor" href="#响应式布局适配案例" aria-hidden="true">#</a> 响应式布局适配案例</h3><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>http://huodong.m.taobao.com/act/yibo.html
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="响应式布局" tabindex="-1"><a class="header-anchor" href="#响应式布局" aria-hidden="true">#</a> 响应式布局</h3><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>通过响应式设计手段能够使网站在手机端和PC端上能够有更好的浏览效果和排版结构
 
 优点：
-面对不同分辨率设备灵活性强
-能够快捷解决多设备显示适应问题
+能够快速解决多设备显示错乱问题
 
 缺点：
-兼容各种设备工作量大，效率低下
-代码累赘，会出现隐藏无用的元素，加载时间加长
-其实这是一种折衷性质的设计解决方案，多方面因素影响而达不到最佳效果
-一定程度上改变了网站原有的布局结构，会出现用户混淆的情况
+兼容各种设备工作量大，效率低下，代码累赘
+会出现隐藏无用的元素，加载时间加长
 
-说到响应式布局，就不得不提起CSS3中的Media Query（媒介查询）
-使用这个工具，我们可以非常方便快捷的制造出各种丰富的实用性强的界面。
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="移动端布局" tabindex="-1"><a class="header-anchor" href="#移动端布局" aria-hidden="true">#</a> 移动端布局</h3><div class="language-css line-numbers-mode" data-ext="css"><pre class="language-css"><code>在移动设备上面做网页布局的时候，以免会遇到手机尺寸不兼容的问题，当我们遇到这么的问题时很容易
-就想到一个叫做视口的工具，该工具指的是移动设备中的屏幕窗口
-在移动端开发中是必须要掌握的一项工具，除了会用到视口以外还有就是上面的media query工具
-这两个结合起来往往可以解决移动端上面的很多兼容问题
-所以在移动端开发中，这两个工具是必须要掌握的
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="视口viewport" tabindex="-1"><a class="header-anchor" href="#视口viewport" aria-hidden="true">#</a> 视口viewport</h3><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>视口指的是移动设备中的设备屏幕窗口
+工具：
+视口、媒体查询
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="视口viewport" tabindex="-1"><a class="header-anchor" href="#视口viewport" aria-hidden="true">#</a> 视口viewport</h3><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>视口指的是移动设备中的设备屏幕窗口
 在移动端浏览器当中，存在着两种视口：		
 一种是可见视口（也就是我们说的设备大小），另一种是视窗视口（网页的宽度是多少）
 
@@ -52,33 +38,7 @@ import{_ as p,p as l,q as i,s as n,R as s,t,Y as e,n as c}from"./framework-aa5c4
 
 将视口设置为设备宽度，并禁止缩放
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, user-scalable=no<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="响应式布局经验之谈-个人经验" tabindex="-1"><a class="header-anchor" href="#响应式布局经验之谈-个人经验" aria-hidden="true">#</a> 响应式布局经验之谈(个人经验)</h3><h4 id="pc端兼容预览方式" tabindex="-1"><a class="header-anchor" href="#pc端兼容预览方式" aria-hidden="true">#</a> PC端兼容预览方式：</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>切换不同屏幕分辨率，以Mac为例
-    1440 x 900
-    1680 x 1050
-    1920 x 1200
-
-主要兼容以上几个屏幕效果，windows的分辨率模式更多，根据实际情况来兼容
-
-兼容多个浏览器
-谷歌、火狐、Safair、Edge(微软)、IE、360、搜狗
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="移动端兼容预览方式" tabindex="-1"><a class="header-anchor" href="#移动端兼容预览方式" aria-hidden="true">#</a> 移动端兼容预览方式：</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>移动端需要兼容两种：平板和手机
-请安装“微信开发者工具”使用公众号网页功能，输入URL来预览效果
-使用该工具的好处就是，利用微信内置的手机浏览器来模拟真实手机效果
-通过查看不同手机机型来处理网页兼容
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="缩放浏览器百分比" tabindex="-1"><a class="header-anchor" href="#缩放浏览器百分比" aria-hidden="true">#</a> 缩放浏览器百分比%</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>有些客户会有要求缩放浏览器界面，也要保证兼容效果，对于这种的要求。
-我们就需要配合 min-width、max-width 等属性来调整兼容了。
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="字体类型统一-重视" tabindex="-1"><a class="header-anchor" href="#字体类型统一-重视" aria-hidden="true">#</a> 字体类型统一(重视！！)</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>很多重视视觉效果的客户，往往会比较喜欢抓字体样式的细节，比如说你的字体是什么宋体，黑体之类的。
-与设计图的效果并不是一样的。这样对于我们开发者来说就非常头疼，所以尽量在页面布局的时候，将字体类型统一。
-那么关于使用自定义字体，我们就要多去活用 @font-face 属性，最好在公共文件中添加属性进行字体统一
-减少页面加载时间过长，请将字体文件进行压缩。
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="字体大小换算-重视" tabindex="-1"><a class="header-anchor" href="#字体大小换算-重视" aria-hidden="true">#</a> 字体大小换算(重视！！)</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>对于设计稿和页面效果的比较客户会非常抓字体大小和字体类型的细节问题，这类问题需要特别注意
-
-可以使用上面的 “手淘方案”
-
-或者使用JS来封装换算效果
-
-给html设置一个font-size:62.5%，使得1rem=10px，仍有可能会出现一些bug
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="移动端rem适配" tabindex="-1"><a class="header-anchor" href="#移动端rem适配" aria-hidden="true">#</a> 移动端rem适配</h3><blockquote><ul><li>rem.js</li></ul></blockquote><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">doc<span class="token punctuation">,</span> win</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="移动端rem适配" tabindex="-1"><a class="header-anchor" href="#移动端rem适配" aria-hidden="true">#</a> 移动端rem适配</h3><blockquote><ul><li>rem.js</li></ul></blockquote><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">doc<span class="token punctuation">,</span> win</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// html元素字体</span>
     <span class="token comment">// 倍数关系可以修改，此处为25</span>
     <span class="token comment">// 设置为10时, dpr=1的手机, 宽度360, 计算出来html的字体大小为5px, 可能是字体太小了</span>
@@ -195,4 +155,30 @@ import{_ as p,p as l,q as i,s as n,R as s,t,Y as e,n as c}from"./framework-aa5c4
 	这也就是为什么我们写的1px的边框在iPhone手机上常常看起来比较粗的原因.
 	使用rem.js, 效果才是我们预期的.
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="设备像素比-device-pixel-ratio" tabindex="-1"><a class="header-anchor" href="#设备像素比-device-pixel-ratio" aria-hidden="true">#</a> 设备像素比(device pixel ratio)</h3><p>设备像素比简称为DPR，其定义了物理像素和设备独立像素的对应关系。它的值可以按下面的公式计算得到：</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>设备像素比 ＝ 物理像素 / 设备独立像素
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="手淘-flexible-适配方案" tabindex="-1"><a class="header-anchor" href="#手淘-flexible-适配方案" aria-hidden="true">#</a> 手淘 flexible 适配方案</h3><p>手机淘宝的H5页面是如何实现多端适配的呢，经过多年的摸索和实战，手淘总结了一套移动端适配的方案<code>lib-flexible</code></p><blockquote><p>https://github.com/amfe/lib-flexible</p></blockquote>`,35),k={href:"https://github.com/amfe/article/issues/17",target:"_blank",rel:"noopener noreferrer"};function m(b,h){const a=c("ExternalLinkIcon");return l(),i("div",null,[d,n("p",null,[n("strong",null,[n("a",r,[s("http://marvin1023.github.io/sandal/reset.html"),t(a)])])]),v,n("p",null,[s("详情地址："),n("a",k,[s("https://github.com/amfe/article/issues/17"),t(a)])])])}const x=p(u,[["render",m],["__file","06.html.vue"]]);export{x as default};
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="手淘-flexible-适配方案" tabindex="-1"><a class="header-anchor" href="#手淘-flexible-适配方案" aria-hidden="true">#</a> 手淘 flexible 适配方案</h3><p>手机淘宝的H5页面是如何实现多端适配的呢，经过多年的摸索和实战，手淘总结了一套移动端适配的方案<code>lib-flexible</code></p><blockquote><p>https://github.com/amfe/lib-flexible</p></blockquote>`,22),k={href:"https://github.com/amfe/article/issues/17",target:"_blank",rel:"noopener noreferrer"},m=a(`<h3 id="响应式布局经验之谈-个人经验" tabindex="-1"><a class="header-anchor" href="#响应式布局经验之谈-个人经验" aria-hidden="true">#</a> 响应式布局经验之谈(个人经验)</h3><h4 id="pc端兼容预览方式" tabindex="-1"><a class="header-anchor" href="#pc端兼容预览方式" aria-hidden="true">#</a> PC端兼容预览方式：</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>切换不同屏幕分辨率，以Mac为例
+    1440 x 900
+    1680 x 1050
+    1920 x 1200
+
+主要兼容以上几个屏幕效果，windows的分辨率模式更多，根据实际情况来兼容
+
+兼容多个浏览器
+谷歌、火狐、Safair、Edge(微软)、IE、360、搜狗
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="移动端兼容预览方式" tabindex="-1"><a class="header-anchor" href="#移动端兼容预览方式" aria-hidden="true">#</a> 移动端兼容预览方式：</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>移动端需要兼容两种：平板和手机
+请安装“微信开发者工具”使用公众号网页功能，输入URL来预览效果
+使用该工具的好处就是，利用微信内置的手机浏览器来模拟真实手机效果
+通过查看不同手机机型来处理网页兼容
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="缩放浏览器百分比" tabindex="-1"><a class="header-anchor" href="#缩放浏览器百分比" aria-hidden="true">#</a> 缩放浏览器百分比%</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>有些客户会有要求缩放浏览器界面，也要保证兼容效果，对于这种的要求。
+我们就需要配合 min-width、max-width 等属性来调整兼容了。
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="字体类型统一-重视" tabindex="-1"><a class="header-anchor" href="#字体类型统一-重视" aria-hidden="true">#</a> 字体类型统一(重视！！)</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>很多重视视觉效果的客户，往往会比较喜欢抓字体样式的细节，比如说你的字体是什么宋体，黑体之类的
+与设计图的效果并不是一样的。这样对于我们开发者来说就非常头疼，所以尽量在页面布局的时候，将字体类型统一
+那么关于使用自定义字体，我们就要多去活用 @font-face 属性，最好在公共文件中添加属性进行字体统一
+减少页面加载时间过长，请将字体文件进行压缩
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="字体大小换算-重视" tabindex="-1"><a class="header-anchor" href="#字体大小换算-重视" aria-hidden="true">#</a> 字体大小换算(重视！！)</h4><div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code>对于设计稿和页面效果的比较客户会非常抓字体大小和字体类型的细节问题，这类问题需要特别注意
+
+可以使用上面的 “手淘方案”
+
+或者使用JS来封装换算效果
+
+给html设置一个font-size:62.5%，使得1rem=10px，仍有可能会出现一些bug
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,11);function b(h,g){const t=c("ExternalLinkIcon");return l(),i("div",null,[d,n("p",null,[n("strong",null,[n("a",r,[s("http://marvin1023.github.io/sandal/reset.html"),e(t)])])]),v,n("p",null,[s("详情地址："),n("a",k,[s("https://github.com/amfe/article/issues/17"),e(t)])]),m])}const f=p(u,[["render",b],["__file","05.html.vue"]]);export{f as default};
