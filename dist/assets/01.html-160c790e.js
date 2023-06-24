@@ -1,0 +1,23 @@
+import{_ as n,r as a,o as l,c as d,b as e,d as t,e as s,a as r}from"./app-6568e73a.js";const c="/dist/assets/images/html5/uniapp/uniapp1.png",u={},p=e("h3",{id:"项目环境搭建仓库源码",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#项目环境搭建仓库源码","aria-hidden":"true"},"#"),t(" 项目环境搭建仓库源码")],-1),o={href:"https://gitee.com/dancefunk/uniapp",target:"_blank",rel:"noopener noreferrer"},v=r(`<h3 id="全局安装vue-cli-如果有安装过-请忽略" tabindex="-1"><a class="header-anchor" href="#全局安装vue-cli-如果有安装过-请忽略" aria-hidden="true">#</a> 全局安装vue-cli(如果有安装过，请忽略)</h3><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>npm install -g @vue/cli@4
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="创建uni-app" tabindex="-1"><a class="header-anchor" href="#创建uni-app" aria-hidden="true">#</a> 创建uni-app</h3><blockquote><p>使用正式版（对应HBuilderX最新正式版）</p></blockquote><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>vue create -p dcloudio/uni-preset-vue uniapp
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>此时，会提示选择项目模板，我们选择<code>默认模板</code>来进行项目开发</p><p><img src="`+c+`" alt="uniapp"></p><h3 id="运行、发布uni-app" tabindex="-1"><a class="header-anchor" href="#运行、发布uni-app" aria-hidden="true">#</a> 运行、发布uni-app</h3><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>npm run dev:%PLATFORM%
+npm run build:%PLATFORM%
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><code>%PLATFORM%</code> 可取值如下：</p><table><thead><tr><th style="text-align:left;">值</th><th style="text-align:left;">平台</th></tr></thead><tbody><tr><td style="text-align:left;">app-plus</td><td style="text-align:left;">app平台生成打包资源（支持npm run build:app-plus，可用于持续集成。不支持run，运行调试仍需在HBuilderX中操作）</td></tr><tr><td style="text-align:left;">h5</td><td style="text-align:left;">H5</td></tr><tr><td style="text-align:left;">mp-alipay</td><td style="text-align:left;">支付宝小程序</td></tr><tr><td style="text-align:left;">mp-baidu</td><td style="text-align:left;">百度小程序</td></tr><tr><td style="text-align:left;">mp-weixin</td><td style="text-align:left;">微信小程序</td></tr><tr><td style="text-align:left;">mp-toutiao</td><td style="text-align:left;">字节跳动小程序</td></tr><tr><td style="text-align:left;">mp-lark</td><td style="text-align:left;">飞书小程序</td></tr><tr><td style="text-align:left;">mp-qq</td><td style="text-align:left;">qq 小程序</td></tr><tr><td style="text-align:left;">mp-360</td><td style="text-align:left;">360 小程序</td></tr><tr><td style="text-align:left;">mp-kuaishou</td><td style="text-align:left;">快手小程序</td></tr><tr><td style="text-align:left;">quickapp-webview</td><td style="text-align:left;">快应用(webview)</td></tr><tr><td style="text-align:left;">quickapp-webview-union</td><td style="text-align:left;">快应用联盟</td></tr><tr><td style="text-align:left;">quickapp-webview-huawei</td><td style="text-align:left;">快应用华为</td></tr></tbody></table><h3 id="目录结构" tabindex="-1"><a class="header-anchor" href="#目录结构" aria-hidden="true">#</a> 目录结构</h3><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>uniapp/
+    babel.config.js         babel配置文件
+    package.json            项目包依赖配置文件
+    postcss.config.js       CSS转换工具
+    tsconfig.json           typescript配置文件
+    node_modules/           依赖安装包目录
+    public/                 站点入口目录
+    src/                    项目业务逻辑目录
+
+
+src/
+    manifest.json           配置应用名称、appid、logo、版本等打包信息
+    pages.json              配置页面路由、导航条、选项卡等页面类信息
+    uni.scss                全局的css文件
+    main.js                 Vue初始化入口文件
+    App.vue                 应用配置，用来配置App全局样式以及监听
+    pages/                  业务页面文件存放的目录
+    static/                 存放应用引用的本地静态资源（如图片、视频等）的目录
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,13);function m(g,x){const i=a("ExternalLinkIcon");return l(),d("div",null,[p,e("p",null,[e("strong",null,[e("a",o,[t("https://gitee.com/dancefunk/uniapp"),s(i)])])]),v])}const h=n(u,[["render",m],["__file","01.html.vue"]]);export{h as default};
