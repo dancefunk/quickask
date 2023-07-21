@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-09eabfdd","path":"/docs/book/job/","title":"日常更新","lang":"en-US","frontmatter":{"title":"日常更新","publish":false},"headers":[],"git":{"createdTime":1678931292000,"updatedTime":1689870357000,"contributors":[{"name":"dancefunk","email":"dancefunk@qq.com","commits":2}]},"filePathRelative":"docs/book/job/README.md"}');export{e as data};
