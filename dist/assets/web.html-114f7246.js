@@ -1,0 +1,428 @@
+import{_ as e,o as l,c as s,b as i,d as n,a as d}from"./app-110372b4.js";const v={},a=i("h2",{id:"第一阶段-前端基础",tabindex:"-1"},[i("a",{class:"header-anchor",href:"#第一阶段-前端基础","aria-hidden":"true"},"#"),n(" 第一阶段 前端基础")],-1),r=i("div",{class:"custom-container tip"},[i("svg",{xmlns:"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink",viewBox:"0 0 24 24"},[i("g",{fill:"none",stroke:"currentColor","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round"},[i("circle",{cx:"12",cy:"12",r:"9"}),i("path",{d:"M12 8h.01"}),i("path",{d:"M11 12h1v4h1"})])]),i("p",{class:"custom-container-title"},"TIP"),i("ul",null,[i("li",null,"HTML"),i("li",null,"CSS"),i("li",null,"LESS、SASS(2选1)"),i("li",null,"响应式布局")])],-1),c=i("h2",{id:"第二阶段-前端进阶",tabindex:"-1"},[i("a",{class:"header-anchor",href:"#第二阶段-前端进阶","aria-hidden":"true"},"#"),n(" 第二阶段 前端进阶")],-1),u=i("div",{class:"custom-container tip"},[i("svg",{xmlns:"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink",viewBox:"0 0 24 24"},[i("g",{fill:"none",stroke:"currentColor","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round"},[i("circle",{cx:"12",cy:"12",r:"9"}),i("path",{d:"M12 8h.01"}),i("path",{d:"M11 12h1v4h1"})])]),i("p",{class:"custom-container-title"},"TIP"),i("ul",null,[i("li",null,"Javascript"),i("li",null,"ECMAScript"),i("li",null,"NodeJS"),i("li",null,"TypeScript")])],-1),m=i("h2",{id:"第三阶段-框架系列",tabindex:"-1"},[i("a",{class:"header-anchor",href:"#第三阶段-框架系列","aria-hidden":"true"},"#"),n(" 第三阶段 框架系列")],-1),b=i("div",{class:"custom-container tip"},[i("svg",{xmlns:"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink",viewBox:"0 0 24 24"},[i("g",{fill:"none",stroke:"currentColor","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round"},[i("circle",{cx:"12",cy:"12",r:"9"}),i("path",{d:"M12 8h.01"}),i("path",{d:"M11 12h1v4h1"})])]),i("p",{class:"custom-container-title"},"TIP"),i("ul",null,[i("li",null,"Webpack / Vite"),i("li",null,[n("Vue "),i("ul",null,[i("li",null,"Vue全家桶"),i("li",null,"Element UI(PC)"),i("li",null,"Vant(Mobile)"),i("li",null,"NuxtJS"),i("li",null,"Quasar"),i("li",null,"VuePress(静态站点生成器)")])]),i("li",null,[n("UniApp "),i("ul",null,[i("li",null,"利用UniApp开发小程序"),i("li",null,"利用UniApp开发混合APP")])]),i("li",null,[n("ReactJS "),i("ul",null,[i("li",null,"React全家桶"),i("li",null,"NextJS"),i("li",null,"Ant Design(PC)"),i("li",null,"React Native(Mobile)")])]),i("li",null,"Flutter"),i("li",null,"Electron(桌面应用开发)")])],-1),t=i("h2",{id:"第四阶段-游戏引擎",tabindex:"-1"},[i("a",{class:"header-anchor",href:"#第四阶段-游戏引擎","aria-hidden":"true"},"#"),n(" 第四阶段 游戏引擎")],-1),o=i("div",{class:"custom-container tip"},[i("svg",{xmlns:"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink",viewBox:"0 0 24 24"},[i("g",{fill:"none",stroke:"currentColor","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round"},[i("circle",{cx:"12",cy:"12",r:"9"}),i("path",{d:"M12 8h.01"}),i("path",{d:"M11 12h1v4h1"})])]),i("p",{class:"custom-container-title"},"TIP"),i("ul",null,[i("li",null,"ThreeJS"),i("li",null,"Unity"),i("li",null,"Egret(白鹭)"),i("li",null,"LayaBox"),i("li",null,"Cocos")])],-1),h=d(`<h2 id="第五阶段-架构与运维" tabindex="-1"><a class="header-anchor" href="#第五阶段-架构与运维" aria-hidden="true">#</a> 第五阶段 架构与运维</h2><details class="custom-container details"><summary class="custom-container-title">架构与运维</summary><ul><li>前端性能优化 <ul><li>JSPerf、YSlow、PageSpeed</li></ul></li><li>项目质量检测 <ul><li>Lint、e2etest、codecov、Benchmark</li></ul></li><li>自动化测试 <ul><li>Mocha、Jest、AVA、Karma、Nightmare</li></ul></li><li>持续集成与持续部署 <ul><li>Jenkins、TravisCI、CircleCI</li></ul></li><li>Linux服务器 <ul><li>Nginx、HTTP(s)、ECS、RDS、SLB云服务</li></ul></li><li>容器化运维操作 <ul><li>Docker操作、部署、运维</li></ul></li></ul></details><h2 id="第六阶段-微服务和分布式" tabindex="-1"><a class="header-anchor" href="#第六阶段-微服务和分布式" aria-hidden="true">#</a> 第六阶段 微服务和分布式</h2><details class="custom-container details"><summary class="custom-container-title">微服务和分布式</summary><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>- 微服务
+    - 了解微服务
+    - 数据通信
+        - ResultFul API
+        - GraphQL
+        - HAL基于ResultFul协议的提升
+        - RPC
+        - 消息队列
+    - 服务注册/发现
+        - Consul
+        - Zookper
+    - 柔性可用/容错
+        - 熔断
+        - 限流
+        - 服务降级
+
+- 消息中间价
+    - RabbitMQ
+    - RocketMQ
+    - Kafka
+    - ActiveMQ
+
+- 分布式
+    - 认识分布式
+    - 分布式事务
+    - 分布式锁
+    - 分布式限流
+    - 分布式订单号生产策略
+    - 分布式系统校验
+
+- DevOps
+    - PM2生产环境部署
+    - Docker
+    - Jenkins持续集成
+    - SonarQube代码质量评测分析
+    - Jumpserver开源堡垒机
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details><h2 id="第七阶段-前端安全" tabindex="-1"><a class="header-anchor" href="#第七阶段-前端安全" aria-hidden="true">#</a> 第七阶段 前端安全</h2><details class="custom-container details"><summary class="custom-container-title">前端安全</summary><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>- SQL注入
+    - 原理：通过把sql命令插入到form表单或者网址的query参数字符串部分，最后达到欺骗服务器执行恶意的sql命令。
+    - 危害：拖库。数据库数据泄露，数据安全事件。
+    - 漏洞分类：数字型、字符型、搜索型
+    - 测试方法：
+        - 1：sqlmap（一款用来检测与利用SQL注入漏洞的免费开源工具）
+        - 2: 手动测试，盲注
+        - 3: fuzzing测试。模糊测试，是一种软件测试技术
+        - 4: 安全工具扫描
+    - 防御方法：
+        - 1：参数化查询（预编译，Java，PrepareStatement()），可彻底杜绝SQL注入
+        - 2: 过滤（白名单、黑名单）
+        - 3: 限制应用用户数据库操作权限
+        - 4: 输入内容格式限制（类型、长度）
+        - 5: 使用框架（Mybatis、IBatis等）
+- XSS
+    - 名称：Cross-site scripting（跨站脚本攻击）
+    - 原理： 当应用程序在发送给浏览器的页面中包含用户提供的数据，但没有经过适当验证和转义，在用户的浏览器中执行攻击者定制的脚本。
+    - 危害：攻击者在受害者浏览器中执行脚本以劫持用户会话，插入恶意内容，重定向用户，使用恶意软件劫持用户浏览器等。结合其他漏洞产生危害，比如结合CSRF攻击实现用户cookie的大面积盗取。
+    - 漏洞分类：存储型，反射型，DOM型
+    - 测试方法：
+        - 1: 手动测试
+        - 2： 安全工具扫描
+        - 3: fuzzing 测试。
+    - 防御方法：
+        - 1: 输入过滤（过滤，拦截，黑白名单）
+        - 2: 输出编码/转义
+        - 3: cookie增加HttpOnly属性
+        - 4: 输入内容格式限制（类型、长度）
+- CSRF
+    - 名称：Cross-site request forgery（跨站请求伪造）
+    - 原理：通过伪装来自受信任用户的请求来利用受信任的网站
+    - 危害：攻击者可以让受害者用户修改任何允许修改的数据，执行任何用户允许的操作，例如修改密码，登录注销等
+    - 漏洞分类：GET类型、POST类型、其他类型
+    - 测试方法：
+        - 1: 安全工具扫描
+        - 2: 手工测试
+    - 防御方法：
+        - 1: Referer；
+        - 2: token，session
+        - 3: 验证码
+- SSRF
+    - 名称：Server-side Request Forgery（服务端请求伪造）
+    - 原理：SSRF 形成的原因大都是由于服务端提供了从其他服务器应用获取数据的功能且没有对目标地址做过滤与限制。比如从指定URL地址获取网页文本内容，加载指定地址的图片，下载等等。
+    - 危害：
+        - 1：可以对外网、服务器所在内网、本地进行端口扫描，获取一些服务的banner信息;
+        - 2: 攻击运行在内网或本地的应用程序（比如溢出）;
+        - 3: 对内网web应用进行指纹识别，通过访问默认文件实现;
+        - 4: 攻击内外网的web应用，主要是使用get参数就可以实现的攻击（比如struts2，sqli等）;
+        - 5: 利用file协议读取本地文件等。
+    - 测试方法：
+        - 手工测试
+    - 防御方法：
+        - 1: 过滤返回信息，验证远程服务器对请求的响应是比较容易的方法。如果web应用是去获取某一种类型的文件。那么在把返回结果展示给用户之前先验证返回的信息是否符合标准。
+        - 2: 统一错误信息，避免用户可以根据错误信息来判断远端服务器的端口状态。
+        - 3: 限制请求的端口为http常用的端口，比如，80,443,8080,8090。
+        - 4: 黑名单内网ip。避免应用被用来获取获取内网数据，攻击内网。
+        - 5: 禁用不需要的协议。仅仅允许http和https请求。可以防止类似于file:///,gopher://,ftp:// 等引起的问题。
+- 任意文件上传
+    - 原理：攻击者利用程序缺陷绕过系统对文件的验证与处理策略将恶意程序上传到服务器并获得执行服务器端命令的能力
+    - 危害：
+        - 如果恶意攻击者通过利用上传漏洞上传一些 以 PHP、ASP、JSP脚本为内容的文件（webshell）
+        - 1: 控制整个网站程序
+        - 2:执行系统命令
+        - 3: 获取数据库链接，进行数据库危险操作
+    - 测试方法：
+        - 1: 安全工具扫描
+        - 2: 手工测试
+    - 防御方法：
+        - 1: 白名单检查文件扩展名
+        - 2: 上传文件的保存目录不可执行
+        - 3: 文件名随机命名
+        - 4: 隐藏上传目录
+- 业务逻辑漏洞
+    - 原理：
+        - 开发在开发程序中，根据假设条件来执行一系列操作，假设条件设计的不够全面，程序执行多步流程时设计不到位，就可能导致逻辑问题。使得一些用户的功能操作偏离了程序员的预想范围，进而对公司业务造成一定的影响。
+    - 危害：
+        - 使得一些用户的功能操作偏离了程序员的预想范围，进而对公司业务造成一定的影响。比如跳过支付某些流程等。
+    - 漏洞分类：
+        - 注册、登录、密码找回、下单逻辑等
+    - 测试方法
+        - 手工测试
+    - 防御方法：
+        - 具体业务场景具体分析
+- XXE
+    - 名称： XML External Entity（xml外部实体注入）
+    - 原理：当程序在解析XML输入时，允许引用外部实体，导致能够引用一个外部恶意文件
+    - 危害：
+        - 1：执行系统命令/代码
+        - 2: 内网端口探测
+        - 3: 文件读取
+        - 4: 攻击内网服务
+        - 5: DDOS攻击
+    - 测试方法：
+        - 手工测试
+    - 防御方法：
+        - 1: 禁用xml解析外部实体
+        - 2: 过滤用户提交的xml数据（过滤关键词：&lt;!DOCTYPE，&lt;!ENTITY，SYSTEM，PUBLIC）
+        - 3: 只解析特定可信的公用外部实体
+- 越权/非授权访问
+    - 原理：指一个已经授权的用户通过更改访问时的一个参数，从而访问到原本其并没有得到授权的对象
+    - 危害：
+        - 1: 任意一个用户可以查看甚至篡改其他用户的订单信息、账号信息等，造成其他用户的正常业务受影响。
+        - 2: 攻击者可以结合任意文件读取漏洞，篡改参数值读取应用程序数据库配置信息，进一步渗透甚至控制服务器。
+        - 3: 大量用户信息被泄露，导致严重的声誉风险。
+        - 4: 地下黑客组织提取泄露的用户数据作为商品在黑市进行交易，引发进一步有针对性的攻击行为，例如根据用户密码进行撞库攻击、根据用户交易记录进行诈骗犯罪。
+    - 漏洞分类：水平越权/垂直越权
+    - 测试方法：
+        - 手工测试
+    - 防御方法：
+        - 1: 服务端做好权限校验。在用户进行操作时，从session中获取用户角色。
+        - 2: 服务端做好权限校验。在业务模块中对用户角色进行校验，不依赖于浏览器的菜单。
+        - 3: 输入参数进行变换
+        - 4: 对文件做访问控制
+        - 5: 将查询参数设置为不可遍历
+- 文件下载漏洞
+    - 原理：
+        - 服务器端应用由于业务需要，有时会提供用户访问服务器资源的功能，例如文件下载等。当应用未对用户提交的路径等参数进行校验，并且该路径在用户权限范围内，可导致非预期的文件访问行为，甚至可访问服务器任意文件，此类安全缺陷称为“文件下载漏洞”
+    - 危害：
+        - 1:  读取web应用配置文件，获得用户名、密码等信息，可能导致web应用、服务器、其他应用系统被攻击者控制；
+        - 2: 攻击者进行穷举猜测或结合目录枚举等漏洞获取服务器资源，可能导致备份文件、数据库敏感数据、应用源代码及其他敏感信息泄露；
+    - 测试方法：
+        - 1: 手工测试
+        - 2: 安全工具扫描
+    - 防御方法：
+        - 1: 权限校验（请求参数、cookie等、编码数据解码后处理）。Java中可以使用getCanonicalPath方法得到解析后的路径，再与预期路径对比判断其合法性；PHP可以配置open_basedir = /dir/，将用户文件访问限制在指定的区域。
+        - 2: 过滤（白名单[0-9a-zA-Z]、黑名单../等）
+        - 3: 文件路径或文件数据直接存储在数据库（杜绝跨目录访问）
+- 重放攻击
+    - 原理
+        - 重放攻击是指攻击者发送一个目的主机已接收过的包，来达到欺骗系统的目的
+    - 危害：
+        - 1:恶意骚扰用户；
+        - 2:造成服务商资源浪费、资产损失；
+        - 3: 如果有用户可控的输入，还会存在续集、违法信息传播等风险；
+    - 漏洞类型：
+        - 短信轰炸、邮件轰炸等
+    - 测试方法：
+        - 手工测试
+    - 防御方法：
+        - 对允许重放的请求增加Token值，只处理首次请求
+- 敏感信息泄漏
+    - 原因：
+        - 1: 用户敏感信息未脱敏；
+        - 2: 服务端信息泄露（错误信息提示、目录泄露、日志文件、硬编码、常见地址、端口暴露等）；
+        - 3: 客户端敏感信息泄露（注释代码未删除、前后端展示信息不一致等）；
+        - 4: 外部github等第三方代码托管；
+    - 危害：
+        - 1: 用户数据泄露风险；
+        - 2: 泄露公司源码、服务端敏感信息，机密数据；
+    - 测试方法
+        - 1: 安全工具扫描
+        - 2: 手工测试
+    - 防御方法
+        - 1: 用户敏感信息脱敏；
+        - 2: 限制服务端数据访问权限；
+        - 3: 禁止公司数据存放在外部平台；
+        - 4: 加强宣导，提升员工安全意识；
+- 短信验证码漏洞
+    - 原因：
+        - 1：无效验证:有验证码模块，但验证模块与业务功能没有关联性；
+        - 2：客户端验证绕过拦截替换验证正确的返回包；
+        - 3: 短信轰炸:对短信验证码接口进行重放，导致大量发送恶意短信；
+        - 4: 验证码爆破:短信验证码一般由4位或6位数字组成，若服务端未对验证时间、次数进行限制，则存在被爆破的可能；
+        - 5: 验证码与手机号未绑定。
+    - 危害
+        - 绕过短信验证码、短信轰炸
+    - 漏洞分类
+        - 1: 无效验证
+        - 2: 客户端绕过验证
+        - 3: 短信轰炸
+        - 4: 验证码爆破
+        - 5: 验证码未绑定手机号
+    - 测试方法
+        - 1: 手工测试
+        - 2: 工具测试
+    - 预防方法
+        - 1: 一次一用
+        - 2: 控制发送频率（建议60s获取一次）、有效期（建议60s内有效，发短信时进行友好提示）、复杂度（短信验证码建议6位数字）
+        - 3: 限制手机号、IP可发送次数
+        - 4：人机识别
+        - 5: 检测接收验证码的手机号和绑定的手机号是否一致
+- 图片验证码漏洞
+    - 原理
+        - 1: 只验证参数存在与否，没有验证验证码的内容值：任意验证码都可以绕过，那就随机填写即可。
+        - 2: 特殊值可以绕过验证：例如空值或者所谓的万能验证码000000。
+        - 3: 没有验证验证码参数但是验证了内容值：去掉参数可以绕过
+        - 4: 验证码太简单，可以使用简单的脚本代码去识别发送。 例如PKAV的HTTP Fuzzer等等。
+        - 5: 验证码不刷新：
+            - 一直不刷新,只要不刷新登录或者操作页面，验证码就一直不刷新，与操作（或者登录） 成功失败无关，这种情况下只要保持页面不刷新，就可以爆破。
+            - 特定条件下不刷新,失败后弹出提示页面或者对话框，只要不点击取消或者确定， 保持提示页面或者对话框不退出，就可以利用burpsuite中的intruder模块进行爆破。
+    - 危害
+        - 绕过图片验证码做一些想做的事情
+    - 测试方法
+        - 1: 手工测试
+        - 2: 工具测试 （PKAV HTTP Fuzzer）
+    - 防御方法
+        - 1: 一次一用
+        - 2: 控制验证码有效期（建议10分钟内有效）、复杂度（4位及以上数字、字母交替）
+        - 3: 从用户体验和安全角度出发，可设计为当用户输3次错误密码后自动弹出验证码输入框进行验证操作
+- 会话固定漏洞
+    - 名称
+        - session攻击
+    - 原理
+        - 利用应用系统session机制上的漏洞，借助受害人信息认证和授权，然后冒用他人身份。
+    - 危害
+        - 1: 敏感信息泄露。用户登录后可访问的内容均可被不法分子获取，可造成用户的私人信息或业务数据泄露， 如手机、电话、住址、身份证号等。
+        - 2: 仿冒用户操作。攻击值可能以用户名义进行其他违法行为。
+    - 测试方法
+        - 手工测试
+    - 防御方法
+        - 1: 一定时间后，强制销毁Session；
+        - 2: 同一用户只允许拥有一个Session。
+- URL跳转漏洞
+    - 原理
+        - 1: 保存图片地址时被替换，且被后端/其他用户加载时未验证；
+        - 2: 写代码时没有考虑过任意URL跳转漏洞，或者根本不知道/不认为这是个漏洞;
+        - 3: 对传入参数做一些奇葩的操作(域名剪切/拼接/重组)和判断，适得其反，反被绕过;
+        - 4:  原始语言自带的解析URL、判断域名的函数库出现逻辑漏洞或者意外特性,可被绕过;
+        - 5: 原始语言、服务器/容器特性、浏览器等对标准URL协议解析处理等差异性导致被绕过;
+        - 6: 写代码时考虑不周,用取子串、取后缀等方法简单判断，代码逻辑可被绕过;
+    - 危害
+        - 网站接受用户输入的链接，跳转到一个攻击者控制的网站，可能导致跳转过去的 用户被精心设置的钓鱼页面骗走自己的个人信息和登录口令。
+    - 测试方法
+        - 手工测试
+    - 防御方法
+        - 1: 代码固定跳转地址，不让用户控制变量
+        - 2: 跳转目标地址采用白名单映射机制（比如1代表auth.landgrey.me， 2代表www.landgrey.me，其它不做任何动作）
+        - 3: 合理充分的校验跳转的目标地址，非己方地址时告知用户跳转风险
+- 远程代码执行/代码注入
+    - 原理：
+        - 由于源码没有针对代码中可执行的特殊函数入口做过滤，导致客户端可以提交恶意构造语句提交，并交由服务器端执行。 命令注入攻击中WEB服务器没有过滤类似 system(),eval()，exec()等函数是该漏洞攻击成功的最主要原因。
+    - 危害
+        - 用户通过浏览器提交执行命令，由于服务器端没有针对执行函数做过滤，导致在没有指定绝对路径的情况下就执行命令， 可能会允许攻击者通过改变 $PATH 或程序执行环境的其他方面来执行一个恶意构造的代码。漏洞被利用，可导致任意
+        - 代码在服务器主机端执行，造成服务器权限被窃取、敏感信息泄漏、重要业务数据被破坏等安全风险。
+    - 漏洞分类
+        - Java反序列化漏洞、OS命令注入等
+    - 测试方法
+        - 1: 安全工具扫描
+        - 2： 手工测试
+    - 防御方法
+        - 限制对应目录的执行权限
+- 缓冲区溢出漏洞
+    - 原理：
+        - 冲区溢出漏洞是指在程序试图将数据放到及其内存中的某一个位置的时候， 因为没有足够的空间就会发生缓冲区溢出的现象（未做边界检查）
+    - 危害
+        - 1: 导致远程服务异常处理，返回报错信息中的包括敏感信息。
+        - 2: 导致远程服务拒绝服务，甚至服务器宕机、蓝屏、重启。
+        - 3: 攻击值精心构造数据包，对远程服务实施缓冲区溢出漏洞的利用，可能达到控制服务器的目的。
+        - 4: 攻击者获取服务器普通用户的权限后，利用服务器本地程序的缓冲区溢出漏洞进行权限提升。
+        - 5: 攻击者可以利用常见的办公软件缓冲区溢出漏洞，通过邮件钓鱼、水坑攻击等方式对公司进行APT攻击，窃取机密数据。
+    - 漏洞分类
+        - MS08-067、MS12-020、MS15-034、MS17-010
+        - 永恒之蓝、心脏出血漏洞、Active栈溢出、MS14-058、脏牛漏洞等
+    - 测试方法
+        - 1: 安全工具扫描
+        - 2: 代码审计
+        - 3: Fuzz测试+逆向分析；
+        - 4: 手工测试
+    - 防御方法
+        - 1: 输入校验：对相关函数输入参数长度和类型进行严格校验。
+        - 2: 编译选项：使用ASL、GS和DEP等编译安全选项，答复提升漏洞利用难度。
+        - 3: 规范化与流程化：遵循安全开发规范，使用安全函数，本地代码（如C/C++）开发的应用系统上线前建议经过该漏洞的安全测试或者源代码安全审计。
+        - 4: 良好的设计：在系统底层框架代码加入输入校验逻辑，形成项目编译规范，业务开发尽量与安全开发分离，有效控制代码质量。
+        - 5: 及时更新补丁：及时更新产品类软件的安全补丁。
+        - 6: 外部防御措施：酌情考虑部署入侵检测系统、APT检测设备等安全设备，与应用系统自身安全构成互补，并对实际发生的攻击行为进行监控和记录。
+- DDOS攻击
+    - 原理
+        - 通过大量恶意流量占用带宽和计算资源以达到瘫痪对方网络的目的
+    - 危害
+        - 1：被攻击主机无法与外界通信；
+        - 2: 无法及时响应正常用户；
+        - 3: 被攻击主机挂起甚至死机；
+        - 4: 应用生产文件无法保存；
+    - 漏洞类型
+        - 1: 流量型攻击
+        - 2: 应用型攻击
+        - 3: 网络协议攻击
+        - 4: CC攻击
+    - 子主题
+        - 手工测试
+    - 防御方法
+        - 1: 第三方网站产品（公有云协助抵御攻击）
+        - 2: ddos设备流量清洗
+        - 3: 负载均衡
+        - 4: 购买带宽或系统优化
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details><h2 id="第八阶段-算法和数据结构" tabindex="-1"><a class="header-anchor" href="#第八阶段-算法和数据结构" aria-hidden="true">#</a> 第八阶段 算法和数据结构</h2><details class="custom-container details"><summary class="custom-container-title">算法和数据结构</summary><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>- 线性链表
+    - 定义
+        - 只含有一个指针域来存放下一个元素地址
+    - 链式存储
+        - 数据域：一部分用于存放数据元素值
+        - 指针域：一部分用于存放指针
+
+- 树和二叉树
+    - 树的基本概念
+        - 简单的非线性结构
+    - 二叉树
+        - 定义：非线性结构，有限节点的集合
+        - 特点：可为空，空的二叉树无节点，非空二叉树有且只有一个节点
+        - 四个基本性质
+    - 满二叉树和完全二叉树
+        - 满二叉树：除最后一层外，每一层上的所有节点都有两个子节点
+        - 完全二叉树：除最后一层外，每一层的节点数均达到最大值，在最后一层只缺少右边的若干节点。
+    - 二叉树的存储结构
+        - 采用链式存储结构，存储节点由数据域和指针域组成
+        - 二叉树链式存储结构也称而搽脸，对满和完全二叉树可按层次进行顺序存储
+- 二叉树的遍历
+    - 定义
+        - 指不重复地访问二叉树中所有节点，主要指非空二叉树，对于空二叉树则结束返回
+    - 分类
+        - 前序遍历
+            - 先访问根节点，再左子树，最后右子树
+        - 中序遍历
+            - 先左子树，再根节点，最后右子树
+        - 后序遍历
+            - 先左子树，再右子树，最后根节点
+- 查找技术
+    - 顺序查找
+        - 在线性表中查找指定的元素
+        - 最坏情况下，最后一个元素才是要找的，则需与所有元素比较，次数为n
+    - 二分查找
+        - 也称折半查找，限制是要求表必须按关键字有序排列
+        - 最坏情况下，对长度为n的有序线性表，只需比较log2n次
+- 栈和队列
+    - 栈及其基本运算
+        - 概念
+            - 一种特殊的线性表，其插入运算与删除运算都只在线性表的一端进行，“先进后出”
+            - 栈顶
+                - 允许插入与删除的一端
+            - 栈底
+                - 栈顶的另一端
+            - 空栈
+                - 栈中没有元素的栈
+        - 特点
+            - （1）栈顶元素最后被插入和最早被删除
+            - （2）栈底元素最早被插入和最后被删除
+            - （3）顺序结构下，栈的插入和删除运算不需移动表中其他数据元素
+            - （4）栈有记忆作用
+        - 顺序存储和运算
+            - 入栈运算、退栈运算、读栈运算
+    - 队列及其基本运算
+        - 概念
+            - 指允许在一端进行插入，在另一端进行删除的线性表，“先进先出”
+            - 队尾
+                - 允许插入的一端，用尾指针指向队尾元素
+            - 排头
+                - 允许删除的一端，用头指针指向头元素的前一位置
+        - 循环队列及其运算
+            - 将队列存储空间的最后一个位置绕到第一个位置，形成逻辑上的环状空间
+            - 入队运算
+                - 指在循环队列的队尾加入一个新元素
+                - 上溢：非空（s=1）且队尾指针等于队头指针
+            - 退队运算
+                - 指在循环队列的队头退出一个元素并赋给指定的变量
+                - 下溢：空（s=0）不能进行退队运算
+- 排序技术
+    - 交换类排序法
+        - 冒泡排序
+        - 快速排序
+    - 插入类排序法
+        - 简单插入类排序
+        - 希尔排序法
+    - 选择类排序法
+        - 简单选择排序法
+        - 堆排序的方法
+- 算法
+    - 概念
+        - 一系列解决问题的基本指令
+    - 特征
+        - 可行性、确定性、有穷性、足够的情报
+    - 基本要素
+        - 对数据对象的运算和操作、算法的控制结构
+    - 设计的方法
+        - 列举法、归纳法、递推法、递归法、减半递推技术、回溯法
+- 数据结构的基本概念
+    - 相互有关联的数据元素的集合、即数据的组织形式
+    - 存储结构的存放形式
+        - 顺序存储、链式存储、索引存储、散列存储
+    - 划分
+        - 线性
+            - 只有一个根节点
+        - 非线性
+- 线性表及其顺序存储结构
+    - 线性表基本概念
+        - 又称线性表，最简单常用的数据结构
+    - 线性表的顺序存储结构
+        - 所占存储空间必须连续、位置按逻辑顺序存放
+    - 线性表的插入运算
+        - 三个步骤
+    - 线性表的删除运算
+        - 两个步骤
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>`,8),p=[a,r,c,u,m,b,t,o,h];function x(w,S){return l(),s("div",null,p)}const k=e(v,[["render",x],["__file","web.html.vue"]]);export{k as default};
